@@ -1,3 +1,15 @@
 spring:
+  datasource:
+    url: ${database_url}
+    username: ${database_user}
+    password: ${database_password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+jpa:
+  database-platform: org.hibernate.dialect.MySQL8Dialect
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+
   application:
     name: NotesService
