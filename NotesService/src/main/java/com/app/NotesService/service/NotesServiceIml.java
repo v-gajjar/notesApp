@@ -6,11 +6,9 @@ import com.app.NotesService.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 
-public class NoteServiceIml implements NoteService {
+public class NotesServiceIml implements NotesService {
 
     @Autowired
     private NoteRepository noteRepository;

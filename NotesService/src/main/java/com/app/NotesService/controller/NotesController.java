@@ -1,7 +1,7 @@
 package com.app.NotesService.controller;
 
 import com.app.NotesService.model.Note;
-import com.app.NotesService.service.NoteService;
+import com.app.NotesService.service.NotesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class NotesController {
 
     @Autowired
-    private NoteService noteService;
+    private NotesService notesService;
 
     @GetMapping
     public String getHome(){
@@ -19,7 +19,7 @@ public class NotesController {
 
     @GetMapping("/note")
     public Note getNote() {
-        return noteService.getNote();
+        return notesService.getNote();
     }
 
 }
